@@ -1,0 +1,201 @@
+@font-face {
+  font-family: Cronos;
+  src: local("Cronos_Pro_Regular"), local("Cronos_Pro_Regular"),
+    url(../web-fonts/Cronos_Pro_Regular.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Italianno;
+  src: local("Italianno"), local("Italianno"),
+    url(../web-fonts/Assistant-VariableFont_wght.ttf);
+  font-display: swap;
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  font-family: "Italianno";
+  letter-spacing: 0.125em;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.links {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border-top: solid thin salmon;
+  height: 1em;
+  padding: 0.5em 2em;
+  margin-left: 2em;
+  position: relative;
+}
+.links::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  display: none;
+  margin: 0 auto;
+  background-image: url(../image/coffe.png);
+  background-size: contain;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.links:hover::before,
+.active::before {
+  display: block;
+}
+.container {
+  padding: 3rem;
+}
+.flex {
+  display: flex;
+  padding: 3rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 10%;
+}
+.logo {
+  left: 5%;
+  top: 25px;
+  position: absolute;
+  z-index: 10;
+}
+.menu {
+  background-color: #003;
+  height: 200px;
+}
+.menu .flex {
+  height: 150px;
+}
+.hero {
+  height: 700px;
+  /*background-image: url(../image/Cronos7.jpg);*/
+  background: url(../image/coffe.png), burlywood;
+  background-size: 40% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding: 3rem 0;
+}
+h1 {
+  font-family: "Cronos";
+  font-size: 10vw;
+  background-image: url(../image/coffee-beans.jpg);
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 100;
+}
+h1::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background: linear-gradient(to right, burlywood, #fff, burlywood);
+  margin-top: -0.25em;
+}
+.intro {
+  background-image: url(../image/coffee-beans1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left 15%;
+}
+.coffee {
+  background-image: url(../image/coffe.png);
+  background-size: contain;
+  background-position: center;
+  width: 15vw;
+  height: 15vw;
+}
+
+section .flex {
+  align-items: flex-start;
+}
+
+section .flex > * + * {
+  margin-left: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+form .data {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  border: solid 2px brown;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+.data > label {
+  width: 30%;
+  display: inline-block;
+}
+.data > input {
+  width: 70%;
+  display: inline-block;
+}
+input,
+textarea {
+  width: 70%;
+  border-radius: 3px;
+  border: none;
+}
+input[type="button"] {
+  width: 200px;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 1em 2em;
+  border-radius: 3px;
+  color: #fff;
+  background-color: chocolate;
+}
+.social {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.social a {
+  display: inline-block;
+  margin-right: 25px;
+}
+.social img {
+  width: 50px;
+}
+iframe {
+  display: block;
+  width: 95%;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: burlywood;
+}

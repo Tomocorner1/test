@@ -1,0 +1,234 @@
+@font-face {
+  font-family: Cronos;
+  src: local("Cronos_Pro_Regular"), local("Cronos_Pro_Regular"),
+    url(../web-fonts/Cronos_Pro_Regular.otf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Italianno;
+  src: local("Italianno"), local("Italianno"),
+    url(../web-fonts/Assistant-VariableFont_wght.ttf);
+  font-display: swap;
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  font-family: "Italianno";
+  letter-spacing: 0.125em;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border-top: solid thin salmon;
+  height: 1em;
+  padding: 0.5em 2em;
+  margin-left: 2em;
+  position: relative;
+}
+a::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  display: none;
+  margin: 0 auto;
+  background-image: url(../image/coffe.png);
+  background-size: contain;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+a:hover::before,
+.active::before {
+  display: block;
+}
+.container {
+  padding: 3rem;
+}
+.flex {
+  display: flex;
+  padding: 3rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 10%;
+}
+.logo {
+  left: 5%;
+  top: 25px;
+  position: absolute;
+  z-index: 10;
+}
+.menu {
+  background-color: #003;
+  height: 200px;
+}
+.menu .flex {
+  height: 150px;
+}
+.hero {
+  height: 700px;
+  /*background-image: url(../image/Cronos7.jpg);*/
+  background: url(../image/coffe.png), burlywood;
+  background-size: 40% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding: 3rem 0;
+}
+h1 {
+  font-family: "Cronos";
+  font-size: 10vw;
+  background-image: url(../image/coffee-beans.jpg);
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 100;
+}
+h1::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background: linear-gradient(to right, burlywood, #fff, burlywood);
+  margin-top: -0.25em;
+}
+.intro {
+  background-image: url(../image/coffee-beans1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left 15%;
+}
+.coffee {
+  background-image: url(../image/coffe.png);
+  background-size: contain;
+  background-position: center;
+  width: 15vw;
+  height: 15vw;
+}
+section .flex {
+  align-items: flex-start;
+}
+section .flex > * {
+  flex-basis: 100%;
+  padding: 1rem;
+  height: 420px;
+}
+section .flex > * + * {
+  margin-left: 1rem;
+}
+.img-box {
+  background: linear-gradient(to right, #f7e8cf, #fff, #f7e8cf);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+li:before {
+  content: "";
+  position: absolute;
+  bottom: -0.25em;
+  width: 85%;
+  height: 0;
+  line-height: 0;
+  border-bottom: 2px dotted #333;
+}
+li {
+  width: 100%;
+  line-height: 1.5em;
+  position: relative;
+}
+li > span {
+  float: right;
+}
+h2 {
+  font-size: 1.75rem;
+  padding-left: 2em;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h2 + span {
+  display: inline-block;
+  padding-left: 3.5rem;
+  float: none;
+}
+article:first-child {
+  background: url(../image/coffe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom -50px;
+  /*border: solid thin red;*/
+}
+
+article p {
+  padding: 2rem 0;
+  height: 100%;
+  font-weight: 700;
+}
+#desayuno,
+#cafe,
+#cena,
+#bebidas {
+  position: relative;
+}
+#cafe,
+#bebidas {
+  background-image: url(../image/coffee-beans1.jpg);
+  background-repeat: no-repeat;
+  background-position: center right 10%;
+  background-size: 70%;
+}
+#desayuno::before {
+  background-color: gold;
+}
+#cafe::before,
+#bebidas::before {
+  background-color: brown;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  display: block;
+  border-radius: 100vh;
+}
+#cena::before {
+  background-color: #008;
+}
+#desayuno::before,
+#cena::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  display: block;
+  border-radius: 100vh;
+}
